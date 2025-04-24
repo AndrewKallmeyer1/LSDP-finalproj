@@ -2,6 +2,7 @@ package final_project
 
 import org.apache.spark.sql.SparkSession
 import scala.util.Random
+import scala.collection.mutable
 
 object main {
     def main (args: Array[String]): Unit = {
@@ -29,7 +30,7 @@ object main {
 
         val shuffledEdges = Random.shuffle(edges)
 
-        val userVertices = Set[Int]()
+        val usedVertices = mutable.Set[Int]()
         val matching = scala.collection.mutable.ArrayBuffer[(Int, Int)]()
 
         for ((u, v) <- shuffledEdges) {

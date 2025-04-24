@@ -1,0 +1,16 @@
+target/
+project/target/
+outputs/
+project/
+data/
+project/project/
+.bloop/
+.metals/
+.ammonite/
+.idea/
+.DS_Store
+*.log
+*.class
+*.jar
+*.zip
+
