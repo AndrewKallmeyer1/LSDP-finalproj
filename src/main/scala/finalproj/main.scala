@@ -27,7 +27,7 @@ object main {
             .collect
             .toBuffer
 
-        val suffledEdges = Random.shuffle(edges)
+        val shuffledEdges = Random.shuffle(edges)
 
         val userVertices = Set[Int]()
         val matching = scala.collection.mutable.ArrayBuffer[(Int, Int)]()
