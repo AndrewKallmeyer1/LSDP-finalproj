@@ -1,8 +1,6 @@
 target/
 project/target/
-outputs/
 project/
-data/
 project/project/
 .bloop/
 .metals/
