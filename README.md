@@ -18,6 +18,7 @@ Algorithmically find the maximum matching for large CSV graphs.
 | musae_ENGB_edges.csv | 35324 | 2261 |
 | soc-pokec-relationships.csv | 22301964 | 588076 |
 | soc-LiveJournal1 | 42851237 | 1716930 |
+| twitter_original_edges | 63555749 | 94269 |
 
 ## Computation Estimations and Runtimes
 
@@ -25,8 +26,7 @@ Local Runs (Files 1 and 2):
 - 6-core CPU, 16GB RAM
 
 Remote Runs (Files 3-6):
-
-- Files 3, 4 (soc-pokec-relationships.csv): 2x4 cores (vCPUs)
+- 2x4 cores (vCPUs)
 
 Runtime Estimations:
 
