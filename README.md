@@ -127,31 +127,31 @@ Bucket Specs:
 
 1. Add original data files and jar file to bucket 
 2. Job 1:
-    2a. Cluster: user-csci3390-finalproj-cluster
-    2b. Job Type: Spark
-    2c. Main Class or jar: final_projecy.luby
-    2d. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
-    2e. Files: gs://user-csci3390-finalproj-bucket/*.csv
-    2f. Arguments: 
-        i. gs://user-csci3390-finalproj-bucket/*.csv
-        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution
-    2g. Max restarts per hour: 1
+    1. Cluster: user-csci3390-finalproj-cluster
+    2. Job Type: Spark
+    3. Main Class or jar: final_projecy.luby
+    4. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
+    5. Files: gs://user-csci3390-finalproj-bucket/*.csv
+    6. Arguments: 
+        1. gs://user-csci3390-finalproj-bucket/*.csv
+        2. gs://user-csci3390-finalproj-bucket/outputs/*_solution
+    7. Max restarts per hour: 1
 3. Go into local terminal and run: 
 
 ```bash
 gsutil compose "gs://user-csci3390-finalproj-bucket/outputs/*_solution/part-*" gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
 ```
 4. Job 2: 
-    4a. Cluster: user-csci3390-finalproj-cluster
-    4b. Job Type: Spark
-    4c. Main Class: final_project.matching_verifier
-    4d. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
-    4e. Files: 
-        i. gs://user-csci3390-finalproj-bucket/*.csv
-        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
-    4f. Arguments: 
-        i. gs://user-csci3390-finalproj-bucket/*.csv
-        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
-    4g. Max restarts per hour: 1
+    1. Cluster: user-csci3390-finalproj-cluster
+    2. Job Type: Spark
+    3. Main Class: final_project.matching_verifier
+    4. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
+    5. Files: 
+        1. gs://user-csci3390-finalproj-bucket/*.csv
+        2. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
+    6. Arguments: 
+        1. gs://user-csci3390-finalproj-bucket/*.csv
+        2. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
+    7. Max restarts per hour: 1
 
 
