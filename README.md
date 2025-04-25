@@ -26,7 +26,7 @@ Local Runs (Files 1 and 2):
 
 Remote Runs (Files 3-6):
 
-- File 3 (soc-pokec-relationships.csv): 2x4 cores (vCPUs)
+- Files 3, 4 (soc-pokec-relationships.csv): 2x4 cores (vCPUs)
 
 Runtime Estimations:
 
@@ -36,6 +36,7 @@ Runtime Estimations:
 | musae_ENGB_edges.csv | 9s |
 | soc-pokec-relationships.csv | 1m 39s |
 | soc-LiveJournal1 | 8m 23s |
+| twitter_original_edges | 6m 59s |
 
 
 
