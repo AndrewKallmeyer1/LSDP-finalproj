@@ -108,4 +108,50 @@ cat outputs/musae_ENGB_edges_solution/part-* > outputs/XXX_solution.csv
 spark-submit --master "local[*]" --class "final_project.matching_verifier" target/scala-2.12/finalproj_2.12-1.0.jar data/XXX.csv outputs/XXX_solution.csv
 ```
 
+Running Remote Files on GCP: 
+
+Cluster Specs: 
+- Name: user-csci3390-finalproj-cluster
+- Region: us-central1 (Subregion: Any)
+- Image Type and Version: 2.2-debian12
+- Primary Network and Subnetwork: default
+- Worker Nodes:
+    - Primary Disk Type: Balanced Persistent Disk
+    - Machine Type: n2-standard-2
+    - Number of Worker Nodes: 4
+    - Primary Disk Size: 100GB
+- Scheduled Deletion: Delete after a cluster idle time (2 hours)
+
+Bucket Specs: 
+- Name: user-csci3390-finalproj-bucket
+
+1. Add original data files and jar file to bucket 
+2. Job 1:
+    2a. Cluster: user-csci3390-finalproj-cluster
+    2b. Job Type: Spark
+    2c. Main Class or jar: final_projecy.luby
+    2d. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
+    2e. Files: gs://user-csci3390-finalproj-bucket/*.csv
+    2f. Arguments: 
+        i. gs://user-csci3390-finalproj-bucket/*.csv
+        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution
+    2g. Max restarts per hour: 1
+3. Go into local terminal and run: 
+
+```bash
+gsutil compose "gs://user-csci3390-finalproj-bucket/outputs/*_solution/part-*" gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
+```
+4. Job 2: 
+    4a. Cluster: user-csci3390-finalproj-cluster
+    4b. Job Type: Spark
+    4c. Main Class: final_project.matching_verifier
+    4d. Jar files: gs://user-csci3390-finalproj-bucket/finalproj_2.12-1.0.jar
+    4e. Files: 
+        i. gs://user-csci3390-finalproj-bucket/*.csv
+        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
+    4f. Arguments: 
+        i. gs://user-csci3390-finalproj-bucket/*.csv
+        ii. gs://user-csci3390-finalproj-bucket/outputs/*_solution.csv
+    4g. Max restarts per hour: 1
+
 
