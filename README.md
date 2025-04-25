@@ -17,6 +17,7 @@ Algorithmically find the maximum matching for large CSV graphs.
 | log_normal_100.csv | 2761 | 47 |
 | musae_ENGB_edges.csv | 35324 | 2261 |
 | soc-pokec-relationships.csv | 22301964 | 588076 |
+| soc-LiveJournal1 | 42851237 | 1716930 |
 
 ## Computation Estimations and Runtimes
 
@@ -34,6 +35,7 @@ Runtime Estimations:
 | log_normal_100.csv | 9s |
 | musae_ENGB_edges.csv | 9s |
 | soc-pokec-relationships.csv | 1m 39s |
+| soc-LiveJournal1 | 8m 23s |
 
 
 
