@@ -69,7 +69,8 @@ Scalability:
 ## Additional References 
 
 - Versioning: Scala 2.12, Spark 3.5
-- Main Class: final_project.main
+- Main Class (Files 1, 2): final_project.main
+- Main Class (Files 3-6): final_project.luby
 - Verifier Class: final_project.matching_verifier
 - Package: finalproj_2.12-1.0.jar
 
