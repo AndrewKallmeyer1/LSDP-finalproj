@@ -12,7 +12,7 @@ Algorithmically find the maximum matching for large CSV graphs.
 
 ## [Link to ZIP files](https://drive.google.com/drive/folders/1XMKILPq0ExdU8j-bdMRRuXzbtkc5rwBE?usp=share_link)
 - Add expanded "original-files" to data/ folder
-- Add expanded "outpur files" to outputs/ folder
+- Add expanded "output-files" to outputs/ folder
 - Use verifier as usual
 
 
