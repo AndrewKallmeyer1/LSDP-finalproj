@@ -71,6 +71,7 @@ The implementation in Apache Spark allows Luby’s algorithm to process large gr
 In contrast, the greedy algorithm is written for single-machine execution, with time complexity O(|E|). While fast and efficient for small graphs, its sequential design limits its applicability to large datasets.
 
 Our strategy for unseen test cases would be to first evaluate the graph’s size. For graphs with fewer than approximately 100,000 edges, we apply the randomized greedy algorithm for its simplicity and speed. For larger graphs, we switch to Luby’s algorithm to exploit parallelism and ensure efficient scaling. This dual-algorithm approach allows us to balance simplicity and scalability, adapting effectively to graphs of any size.
+
 ---
 
 ## File Naming
